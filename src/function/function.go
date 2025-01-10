@@ -30,11 +30,27 @@ func is_palindorme(x int) bool {
 	return true
 }
 
+func get_average(arr []int, size int) float32 {
+	var sum int
+	var avg float32
+	for i := 0; i < size; i++ {
+		sum += arr[i]
+	}
+	avg = float32(sum) / float32(size)
+	return avg
+}
+
 func main() {
 	var a int = 100
 	var b int = 200
 	var ret int
 
+	var arr = [5]int{1, 2, 3, 4, 5}
+
 	ret = max(a, b)
 	fmt.Printf("max = %d\n", ret)
+
+	// 函数传入数组
+	res := get_average(arr[:], 5)
+	fmt.Printf("average = %.2f\n", res)
 }
