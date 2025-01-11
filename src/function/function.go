@@ -40,6 +40,14 @@ func get_average(arr []int, size int) float32 {
 	return avg
 }
 
+func fibonacci(n int) int {
+	a, b := 0, 1
+	for i := 1; i < n; i++ {
+		a, b = b, a+b
+	}
+	return b
+}
+
 func main() {
 	var a int = 100
 	var b int = 200
@@ -53,4 +61,6 @@ func main() {
 	// 函数传入数组
 	res := get_average(arr[:], 5)
 	fmt.Printf("average = %.2f\n", res)
+	n := 3
+	fmt.Printf("fibonacci(%d) = %d\n", n, fibonacci(n))
 }

@@ -44,4 +44,15 @@ func main() {
 	// 将arr4的元素复制到arr5
 	var arr5 []int
 	copy(arr5, arr4)
+
+	// map函数
+	var capital_map = map[string]string{"China": "Beijing", "USA": "Washington"}
+	fmt.Println(capital_map)
+	for country := range capital_map {
+		fmt.Println(country, "capital is:", capital_map[country])
+	}
+	// 删除map中的元素
+	delete(capital_map, "USA")
+	fmt.Println(capital_map)
+
 }
