@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Go/src/base/pkg/calutils"
 	"fmt"
 	"strconv"
 )
@@ -38,15 +39,8 @@ func main() {
 	// float 转 string
 	var f2 float64 = 123.45
 	var s4 string = strconv.FormatFloat(f2, 'f', 2, 64)
-	fmt.Printf("float %f convert to string: '%s'", f2, s4)
+	fmt.Printf("float %f convert to string: '%s'\n", f2, s4)
 
-	//
-	var s5 interface{} = "hello"
-	str, ok := s5.(string)
-	if ok {
-		fmt.Printf("%s is string", str)
-	} else {
-		fmt.Printf("%s is not string", str)
-	}
+	fmt.Println(calutils.Product(1, 2))
 
 }

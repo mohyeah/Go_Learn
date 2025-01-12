@@ -55,4 +55,8 @@ func main() {
 	delete(capital_map, "USA")
 	fmt.Println(capital_map)
 
+	for country, capital := range capital_map {
+		fmt.Println(country, "capital is:", capital)
+	}
+
 }
