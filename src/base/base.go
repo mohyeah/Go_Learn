@@ -42,5 +42,7 @@ func main() {
 	fmt.Printf("float %f convert to string: '%s'\n", f2, s4)
 
 	fmt.Println(calutils.Product(1, 2))
+	fmt.Println(calutils.Div1(1, 0))
+	fmt.Println(calutils.Div2(1, 0))
 
 }

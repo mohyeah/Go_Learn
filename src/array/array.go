@@ -59,4 +59,13 @@ func main() {
 		fmt.Println(country, "capital is:", capital)
 	}
 
+	var arr6 = [5]string{}
+	for i := 0; i < len(arr6); i++ {
+		fmt.Printf("input No.%d score:", i)
+		fmt.Scanf("%s", &arr6[i])
+	}
+	for key, val := range arr6 {
+		fmt.Printf("No.%d score: is %s\n", key, val)
+	}
+
 }
