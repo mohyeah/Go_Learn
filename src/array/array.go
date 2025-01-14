@@ -46,18 +46,33 @@ func main() {
 	copy(arr5, arr4)
 
 	// map函数
-	var capital_map = map[string]string{"China": "Beijing", "USA": "Washington"}
-	fmt.Println(capital_map)
-	for country := range capital_map {
-		fmt.Println(country, "capital is:", capital_map[country])
+	var capitalMap = map[string]string{"China": "Beijing", "USA": "Washington"}
+	fmt.Println(capitalMap)
+	for country := range capitalMap {
+		fmt.Println(country, "capital is:", capitalMap[country])
 	}
 	// 删除map中的元素
-	delete(capital_map, "USA")
-	fmt.Println(capital_map)
+	delete(capitalMap, "USA")
+	fmt.Println(capitalMap)
 
-	for country, capital := range capital_map {
+	for country, capital := range capitalMap {
 		fmt.Println(country, "capital is:", capital)
 	}
+
+	var sm map[int]string
+	// 创建map, 容量为5
+	sm = make(map[int]string, 5)
+	sm = map[int]string{
+		0: "Tom",
+		1: "Jerry",
+		2: "Mike",
+	}
+	for key, val := range sm {
+		fmt.Println(key, val)
+	}
+	// 查找元素
+	val, flag := sm[0]
+	fmt.Println(val, flag)
 
 	var arr6 = [5]string{}
 	for i := 0; i < len(arr6); i++ {

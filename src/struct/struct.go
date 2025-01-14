@@ -11,12 +11,17 @@ type student struct {
 }
 
 // 结构体指针
-func print_student(stu *student) {
+func printStudent(stu *student) {
 	fmt.Printf("student name: %s\n", stu.name)
 	fmt.Printf("student age: %d\n", stu.age)
 	fmt.Printf("student gender: %s\n", stu.gender)
 	fmt.Printf("student subject: %s\n", stu.subject)
 	fmt.Printf("student score: %.2f\n", stu.score)
+}
+
+// 结构体方法
+func (stu *student) selfDes() {
+	fmt.Println("I'm", stu.name)
 }
 
 func main() {
@@ -31,7 +36,7 @@ func main() {
 	Lily.name = "Lily"
 	Lily.age = 18
 	fmt.Println(Lily.age)
-
-	print_student(&Lily)
+	printStudent(&Lily)
+	Lily.selfDes()
 
 }
